@@ -1,0 +1,544 @@
+/*
+  Author: Nathan van der Velde - CryosisOS
+  Date Created: 2020-11-06
+  GitHub: CryosisOS
+*/
+
+/*
+  To anybody with the source code to this style sheet
+  Increment the below number as you waste time reading or writing
+  pointless comments in this file:
+
+  Hours Spent: 2
+*/
+
+/*
+  Some simple header rules for the h1, overriding some existing rules.
+*/
+.h1, h1 {
+  margin: 0px;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+/*
+  Defining light mode rules for body
+*/
+body {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/*
+  Defining dark mode rules for body
+*/
+body.dark-mode {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/*
+  Trying out something with this, left this here as an artifact.
+*/
+@media (max-width: 360px) {
+  #logo_image {
+    width: 100%;
+  }
+}
+
+/*
+  Because CSS art is a thing, simple maths to figure out
+  the border lengths required.
+*/
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 12.5px solid transparent;
+  border-bottom: 12.5px solid transparent;
+  border-left: 21.65px solid #b34916;
+}
+
+/*
+  Dark mode toggle rules for arrow-right
+*/
+
+.arrow-right-dark-mode {
+  width: 0;
+  height: 0;
+  border-top: 12.5px solid transparent;
+  border-bottom: 12.5px solid transparent;
+  border-left: 21.65px solid #0070C0;
+}
+
+/*
+  Because CSS art is a thing, simple maths to figure out
+  the border lengths required.
+*/
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-top: 21.65px solid #b34916;
+}
+
+/*
+  Dark mode toggle rules for arrow-down
+*/
+.arrow-down-dark-mode {
+  width: 0;
+  height: 0;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-top: 21.65px solid #0070C0;
+}
+
+/*
+  Simply giving it some breathing room.
+*/
+.content-paragraph {
+  padding-bottom: 20px;
+}
+
+/*
+  Defining the styles of the footer class.
+*/
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+/*
+  To match the logo background since it is transparents.
+*/
+#header-container {
+  background-color: #000000;
+}
+
+/*
+  Changing the width because the size of the original image
+  is to large.
+*/
+#logo_image {
+  width: 360px;
+}
+
+/*
+  The style attribute names explain what is going on
+  decenelty enough.
+*/
+#title {
+  text-align: center;
+  justify-self: center;
+  width: 100%;
+  font-family: 'Baskerville Old Face';
+  color: #ffffff;
+  font-size: 50pt;
+}
+
+/*
+  Same as above, the attribute names describe what is going on
+  decently enough.
+*/
+#sub-heading {
+  text-align: center;
+  justify-self: center;
+  width: 100%;
+  font-family: 'Baskerville Old Face';
+  color: #ffffff;
+  padding-bottom: 20px;
+  margin-top: -8px;/* This is so that the element is closer
+                      to the title above it. */
+}
+
+/*
+  These rules are here to define the layout of all the content inside of it.*/
+#content-containers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*
+  The rules themselves, describe what is going on.
+*/
+#cryo-name {
+  padding-left: 0px;
+  text-align: left;
+  font-size: 20pt;
+  font-family: 'Lucida Console';
+  width: 75%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*
+  Some simple CSS "copied" from bootstrap css to help with positioning of the button.
+*/
+.btn:not(:disabled):not(.disabled) {
+  float: right;
+}
+
+/*
+  helping with layout and heirarchal positioning.
+*/
+.content-header-container {
+  width: 100%;
+}
+
+/*
+  Defining rules for the content div for this section. When putting it
+  in a class rule, it screws up with the positioning. Don't know why.
+*/
+#content-container-who-are-we {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+}
+
+/*
+  Positioning and id'ing the arrow for this section so that
+  it can be reference in the JavaScript for the "rotation" of the
+  element on click.
+*/
+#who-are-we-arrow {
+  display: inline;
+  float: left;
+  padding-right: 4px;
+}
+
+/*
+  The rules say it all. Formatting for the content header of this section.
+  Agin, when putting it in it's own class there was screwy stuff going on
+  with the positioning. Was easier to put it in it's own rule mapped to
+  the id of the element.
+*/
+#content-header-who-are-we {
+  padding-left: 0px;
+  text-align: left;
+  font-size: 16pt;
+  font-family: 'Lucida Console';
+  display: inline;
+  float: left;
+  margin-top: 0;
+  top: 50%;
+}
+
+/*
+  Defining the rules for the actual content of this section.
+  These comments are getting quite tedious, particularly when the rules
+  themselves describe what is happening. Does it really need to be
+  repeated all the time. It almost seems like complete copy and paste
+  of repetitive comments that don't add any understanding whatsoever to
+  the style sheet, but instead just take up more space than is needed.
+  And can actually end up confusing any furture devs rather than helping them.
+*/
+#content-who-are-we {
+  text-align: left;
+  font-family: 'gothic';
+  width: 95%;
+  display: none; /* Initial display */
+}
+
+/*
+  Defining rules for the content div for this section. When putting it
+  in a class rule, it screws up with the positioning. Don't know why.
+*/
+#content-container-who-am-i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+}
+
+/*
+  Positioning and id'ing the arrow for this section so that
+  it can be reference in the JavaScript for the "rotation" of the
+  element on click.
+*/
+#who-am-i-arrow {
+  display: inline;
+  float: left;
+  padding-right: 4px;
+}
+
+/*
+  The rules say it all. Formatting for the content header of this section.
+  Agin, when putting it in it's own class there was screwy stuff going on
+  with the positioning. Was easier to put it in it's own rule mapped to
+  the id of the element.
+*/
+#content-header-who-am-i {
+  padding-left: 0px;
+  text-align: left;
+  font-size: 16pt;
+  font-family: 'Lucida Console';
+  display: inline;
+  float: left;
+  margin-top: 0;
+  top: 50%;
+}
+
+/*
+  Defining the rules for the actual content of this section.
+  These comments are getting quite tedious, particularly when the rules
+  themselves describe what is happening. Does it really need to be
+  repeated all the time. It almost seems like complete copy and paste
+  of repetitive comments that don't add any understanding whatsoever to
+  the style sheet, but instead just take up more space than is needed.
+  And can actually end up confusing any furture devs rather than helping them.
+*/
+#content-who-am-i {
+  text-align: left;
+  font-family: 'gothic';
+  width: 95%;
+  display: none; /* Initial display */
+}
+
+/*
+  Defining rules for the content div for this section. When putting it
+  in a class rule, it screws up with the positioning. Don't know why.
+*/
+#content-container-experience {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+}
+
+/*
+  Positioning and id'ing the arrow for this section so that
+  it can be reference in the JavaScript for the "rotation" of the
+  element on click.
+*/
+#experience-arrow {
+  display: inline;
+  float: left;
+  padding-right: 4px;
+}
+
+/*
+  The rules say it all. Formatting for the content header of this section.
+  Agin, when putting it in it's own class there was screwy stuff going on
+  with the positioning. Was easier to put it in it's own rule mapped to
+  the id of the element.
+*/
+#content-header-experience {
+  padding-left: 0px;
+  text-align: left;
+  font-size: 16pt;
+  font-family: 'Lucida Console';
+  display: inline;
+  float: left;
+  margin-top: 0;
+  top: 50%;
+}
+
+/*
+  Defining the rules for the actual content of this section.
+  These comments are getting quite tedious, particularly when the rules
+  themselves describe what is happening. Does it really need to be
+  repeated all the time. It almost seems like complete copy and paste
+  of repetitive comments that don't add any understanding whatsoever to
+  the style sheet, but instead just take up more space than is needed.
+  And can actually end up confusing any furture devs rather than helping them.
+*/
+#content-experience {
+  text-align: left;
+  font-family: 'gothic';
+  width: 95%;
+  display: none; /* Initial display */
+}
+
+/*
+  Defining rules for the content div for this section. When putting it
+  in a class rule, it screws up with the positioning. Don't know why.
+*/
+#content-container-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+}
+
+/*
+  Positioning and id'ing the arrow for this section so that
+  it can be reference in the JavaScript for the "rotation" of the
+  element on click.
+*/
+#projects-arrow {
+  display: inline;
+  float: left;
+  padding-right: 4px;
+}
+
+/*
+  The rules say it all. Formatting for the content header of this section.
+  Agin, when putting it in it's own class there was screwy stuff going on
+  with the positioning. Was easier to put it in it's own rule mapped to
+  the id of the element.
+*/
+#content-header-projects {
+  padding-left: 0px;
+  text-align: left;
+  font-size: 16pt;
+  font-family: 'Lucida Console';
+  display: inline;
+  float: left;
+  margin-top: 0;
+  top: 50%;
+}
+
+/*
+  Defining the rules for the actual content of this section.
+  These comments are getting quite tedious, particularly when the rules
+  themselves describe what is happening. Does it really need to be
+  repeated all the time. It almost seems like complete copy and paste
+  of repetitive comments that don't add any understanding whatsoever to
+  the style sheet, but instead just take up more space than is needed.
+  And can actually end up confusing any furture devs rather than helping them.
+*/
+#content-projects {
+  text-align: left;
+  font-family: 'gothic';
+  width: 95%;
+  display: none; /* Initial display */
+}
+
+/*
+  Defining rules for the content div for this section. When putting it
+  in a class rule, it screws up with the positioning. Don't know why.
+*/
+#content-container-our-communities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+}
+
+/*
+  Positioning and id'ing the arrow for this section so that
+  it can be reference in the JavaScript for the "rotation" of the
+  element on click.
+*/
+#our-communities-arrow {
+  display: inline;
+  float: left;
+  padding-right: 4px;
+}
+
+/*
+  The rules say it all. Formatting for the content header of this section.
+  Agin, when putting it in it's own class there was screwy stuff going on
+  with the positioning. Was easier to put it in it's own rule mapped to
+  the id of the element.
+*/
+#content-header-our-communities {
+  padding-left: 0px;
+  text-align: left;
+  font-size: 16pt;
+  font-family: 'Lucida Console';
+  display: inline;
+  float: left;
+  margin-top: 0;
+  top: 50%;
+}
+
+/*
+  Defining the rules for the actual content of this section.
+  These comments are getting quite tedious, particularly when the rules
+  themselves describe what is happening. Does it really need to be
+  repeated all the time. It almost seems like complete copy and paste
+  of repetitive comments that don't add any understanding whatsoever to
+  the style sheet, but instead just take up more space than is needed.
+  And can actually end up confusing any furture devs rather than helping them.
+*/
+#content-our-communities {
+  text-align: left;
+  font-family: 'gothic';
+  width: 95%;
+  display: none; /* Initial display */
+}
+
+/*
+  Specifying rules for the content in the footer.
+  This is here to account positiong the actual elements of the
+  footer that are displayed.
+*/
+#footer-content-div {
+  width: auto;
+  margin: auto;
+  display: inline-block;
+}
+
+/*
+  Positioning rules for the github tag.
+*/
+#github-tag {
+  float: left;
+  margin: 10px;
+}
+
+/*
+  Size modifications and display/position rules for the github logo
+  in the footer.
+*/
+#github-logo {
+  width: 27px;
+  display: inline;
+  float: left;
+}
+
+/*
+  Specifying the font to use for the github footer text.
+  As well as defining some positiong elements to make it align the
+  way that I want it to align.
+*/
+#github-header {
+  font-size: 18pt;
+  display: inline;
+  float: left;
+  font-family: 'Baskerville Old Face';
+}
+
+/*
+  Positioning of the overall container for the elements of the
+  LinkedIn content in the footer.
+*/
+#linkedIn-tag {
+  padding-left: 0px;
+  float: left;
+  margin: 10px;
+}
+
+/*
+  Size modifications and display/position rules for the LinkedIn logo
+  in the footer.
+*/
+#linkedin-logo {
+  width: 25px;
+  display: inline;
+  float: left;
+}
+
+/*
+  Specifying the font to use for the LinkedIn footer text.
+  As well as defining some positiong elements to make it align the
+  way that I want it to align.
+*/
+#linkedIn-header {
+  font-size: 18pt;
+  display: inline;
+  float: left;
+  font-family: 'Baskerville Old Face';
+}

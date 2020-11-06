@@ -1,0 +1,313 @@
+<!--
+    Author: Nathan van der Velde - CryosisOS
+    Date Created: 2020-11-06
+    GitHub: https://github.com/CryosisOS
+    No more information is given, since this is being hosted on
+    a public facing web host.
+-->
+<!--
+    Declaring the doctype, if you're looking at this, both you
+    and I know why this is being done.
+-->
+<!DOCTYPE html>
+<!--
+    Declaring the lang of the page
+    "For HTML use the lang attribute only, for XHTML 1.0 served
+    as text/html use the lang and xml:lang attributes,
+    and for XHTML served as XML use the xml:lang attribute only."
+    ~ xml:lang versus lang | Oracle Ramkumar Menon's Blog
+    ~ https://blogs.oracle.com/rammenon/xml:lang-versus-lang
+    ~ 2020-11-06
+-->
+<html lang="en" xml:lang="en">
+
+<!-- ======================================== -->
+<!-- BEGIN OF head SECTION...
+    like the tag implies
+-->
+<!-- ======================================== -->
+<head>
+    <!-- Declaring charset to utf-8... as the tag says -->
+    <meta charset="utf-8">
+    <!--
+        Small little trick that I learnt from another dev.
+        Helps with multi-media websites that can be viewed on several
+        different devices.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!--
+        The title... really do comments and observations as mundane as this
+        need to be stated?
+    -->
+    <title>CryoPlanet</title>
+    <!-- Linking the CSS files for the webfonts and the element styles in the page. -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Baskerville%20Old%20Face.css">
+    <link rel="stylesheet" href="assets/css/gothic.css">
+    <link rel="stylesheet" href="assets/css/Lucida%20Console.css">
+    <link rel="stylesheet" href="assets/css/Lucida%20Sans%20Unicode.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Specifying a tab space in css for this page. -->
+    <style type="text/css">
+        dummydeclaration { padding-left: 3em; } /* Firefox ignores first declaration for some reason */
+        tab1 { padding-left: 3em; }
+        tab2 { padding-left: 6em; }
+    </style>
+</head>
+<!-- ======================================== -->
+<!-- END OF head SECTION-->
+<!-- ======================================== -->
+
+<!-- ======================================== -->
+<!-- END OF body SECTION-->
+<!-- ======================================== -->
+<body>
+    <!-- The header container, hence the id "header-container", contains the header bar. -->
+    <div id="header-container">
+        <!-- the logo, as the id implies -->
+        <img id="logo_image" src="assets/img/CryoPlanetLogo_500x167.png"
+            alt="Logo that says Cryo Planet">
+        <!-- a title -->
+        <h1 id="title">Cryo Planet</h1>
+        <!-- a subtitle -->
+        <h1 id="sub-heading">Home of the CryoDevs</h1>
+    </div>
+    <!--
+        The below tag is the overall container storing all the content of the
+        main body of the page.
+    -->
+    <div id="content-containers">
+        <!--
+            The header of the file, contains a button that floats to the
+            right because inline stuff, simply there for spacing and layout.
+        -->
+        <h1 id="cryo-name">
+            CryosisOS
+            <!-- The darkmode toggle button. -->
+            <button class="btn btn-primary btn-toggle" type="button">
+                Dark Mode
+            </button>
+        </h1>
+        <!-- DIV container the the "Who are We" section -->
+        <div id="content-container-who-are-we" class="content-paragraph">
+            <!--
+                DIV for the header to help with positioning the two
+                elements that make up a header for a content sction.
+            -->
+            <div class="content-header-container">
+                <!-- The arrow for the container -->
+                <div id="who-are-we-arrow" class="arrow-right"></div>
+                <!-- The header for the section -->
+                <h1 id="content-header-who-are-we">
+                    Who are we?
+                </h1>
+            </div>
+            <!-- The content -->
+            <p id="content-who-are-we">
+                The CryoDevs are a group of friends that develop projects together. 
+                Everything from Mobile apps to Operating System routines. All that we 
+                build, we build for fun and for the experience of learning. We 
+                are starting to branch out into commercial work together, working on 
+                small contracts that last for about 2-3 months.<br />
+                We like to build content that is relevant and useful. Using modern tech stacks 
+                and practices for developing products.
+            </p>
+        </div>
+        <!-- DIV container the the "Who am I" section -->
+        <div id="content-container-who-am-i" class="content-paragraph">
+            <!--
+                DIV for the header to help with positioning the two
+                elements that make up a header for a content sction.
+            -->
+            <div class="content-header-container">
+                <!-- The arrow for the container -->
+                <div id="who-am-i-arrow" class="arrow-right"></div>
+                <!-- The header for the section -->
+                <h1 id="content-header-who-am-i">
+                    Who am I?
+                </h1>
+            </div>
+            <!-- The content -->
+            <p id="content-who-am-i">
+                I am CryosisOS, the lead embedded systems developer and backend engineer. 
+                With the leading experience in backend technologies, server infrarstructure 
+                and business orientated IT practices.<br /><br />
+
+                I am a self-driven developer, with a passion for communication over networks 
+                and between programs. Involving everything from File formats to Databases and 
+                network protocols.<br /><br />
+
+                I believe that information exchange is the biggest market in the world today 
+                and will continue to be for the foreseeable future. Problem solving in 
+                this domain is an experience that keeps me motivated and always interested 
+                in providing solutions for people that need them.
+            </p>
+        </div>
+        <!-- DIV container the the "Experience" section -->
+        <div id="content-container-experience" class="content-paragraph">
+            <!--
+                DIV for the header to help with positioning the two
+                elements that make up a header for a content sction.
+            -->
+            <div class="content-header-container">
+                <!-- The arrow for the container -->
+                <div id="experience-arrow" class="arrow-right"></div>
+                <!-- The header for the section -->
+                <h1 id="content-header-experience">
+                    Experience
+                </h1>
+            </div>
+            <!-- The content -->
+            <p id="content-experience">
+                My experience is comprised of 9 years of programming experience with C. 
+                With other languages such as Java, C# and Python coming into play in 
+                the last 5 years.<br /><br />
+
+                <!--
+                    I do my list like this because otherwise the properties and functionality of the
+                    toggle do not carry over to a <ul></ul element.
+                -->
+                <b>The total list of languages I know are:</b><br />
+                    <tab1>- Bash<br /></tab1>
+                    <tab1>- C<br /></tab1>
+                    <tab1>- C++<br /></tab1>
+                    <tab1>- C#<br /></tab1>
+                    <tab1>- Java<br /></tab1>
+                    <tab1>- JavaScript<br /></tab1>
+                    <tab1>- PHP<br /></tab1>
+                    <tab1>- PowerShell<br /></tab1>
+                    <tab1>- Python 3<br /></tab1>
+                    <tab1>- TypeScript<br /></tab1><br />
+
+                There are also several frameworks and tech stacks that I am familiar with. 
+                But to list them all would take up to much space. So the relevant ones that 
+                I am familiar with are; .NET Core, ASP.NET, XAMPP/LAMP, Electron/React and NodeJS/React.
+            </p>
+        </div>
+        <!-- DIV container the the "Projects" section -->
+        <div id="content-container-projects" class="content-paragraph">
+            <!--
+                DIV for the header to help with positioning the two
+                elements that make up a header for a content sction.
+            -->
+            <div class="content-header-container">
+                <!-- The arrow for the container -->
+                <div id="projects-arrow" class="arrow-right"></div>
+                <!-- The header for the section -->
+                <h1 id="content-header-projects">
+                    Projects
+                </h1>
+            </div>
+            <!-- The content -->
+            <p id="content-projects">
+                We have several projects in the works right now but they are listed as private 
+                and as such don't have a public facing link that can be viewed. This will change 
+                as soon as their is a public release. But to describe what the project include, continue reading. 
+                <br /><br />
+                <b>List of Projects:</b><br />
+                <b>- Presentation Suite</b><br />
+                    This system involves a mobile app, electron app and a 
+                    webserver technology. It allows the user to put together 
+                    a presentation comprising of power points slides, videos and audio 
+                    components all at the same time. The user can then project the presentation 
+                    onto a screen and then have the option to control the presentation from 
+                    any mobile device that is authorised with the presentation app on the 
+                    local network.<br />
+                <b>- Remote Light Control</b><br />
+                    This system involves some electrical and electronic engineering. 
+                    It involves placing an electronic switch in the pathway of a 240V 
+                    circuit for a light switch circuit in a room. Connected to this 
+                    electronic switch is a raspberry pi with a webserver on it that hosts 
+                    an API that can then be utilised by a web browser or a mobile phone app. 
+                    Allowing for remote control over the light switch. Custome built electrical-rated 
+                    plastic components are also being designed and printed for use with the system.<br />
+                <b>- Anime Web Player</b>-<br />
+                    This project is little bit more of a hobby project. It basically uses an 
+                    electron app framework to host a video player that plays anime episodes hosted on 
+                    popular free websites like gogoanime or horriblesubs. The key feature to this is a 
+                    in frame autoplay feature and episode navigation controls.<br /><br />
+            </p>
+        </div>
+        <!-- DIV container the the "Our Communities" section -->
+        <div id="content-container-our-communities" class="content-paragraph">
+            <!--
+                DIV for the header to help with positioning the two
+                elements that make up a header for a content sction.
+            -->
+            <div class="content-header-container">
+                <!-- The arrow for the container -->
+                <div id="our-communities-arrow" class="arrow-right"></div>
+                <!-- The header for the section -->
+                <h1 id="content-header-our-communities">
+                    Our Communities
+                </h1>
+            </div>
+            <!-- The content -->
+            <p id="content-our-communities">
+                We run a Discord Community of programmers call PlanetCode, this community is comprised of close to 2000 members.<br /><br />
+
+                <b>Discord Link:&nbsp;</b><a href="https://discord.gg/j8PZjKeR">Join</a><br /><br />
+
+                Where anyone is welcome to come and ask questions, we have developers that have spent 10+ years in the industry 
+                and programmers that are still making their way through high-school. We have a wealth of knowledge and can answer 
+                questions asked by beginners and advanced programmers alike.<br /><br />
+                We are also in the process of setting up an Twitch profile to stream software development and system design. 
+                When the profile is setup and a timetable has been setup. It will be uploaded here.<br />
+                There are also plans in the works to set up a joint YouTube channel to present projects, tutorials 
+                and little informational videos to do with the tech industry today.
+            </p>
+        </div>
+    </div>
+    <!--
+        The section for the footer. To define the spacing and layout of
+        where it is in the page
+    -->
+    <div id="footer" class="footer">
+        <!--
+            The following div is a wrapper for all the content in the
+            footer of the page.
+        -->
+        <div id="footer-content-div">
+            <!-- The section for the github tag. -->
+            <div id="github-tag">
+                <!--
+                    This link points to my github profile page.
+                -->
+                <a id="external github link" href="https://github.com/CryosisOS">
+                    <!-- The github logo, like the id says. -->
+                    <img id="github-logo" src="assets/img/GitHub-Mark.png"
+                        alt="Git Hub logo">
+                    <!-- The text of the github header, displays my account name. -->
+                    <h1 id="github-header">CryosisOS</h1>
+                </a>
+            </div>
+            <!-- The section for the linkedIn tag. -->
+            <div id="linkedIn-tag">
+                <!--
+                    This link points to my linkedIn profile page.
+                -->
+                <a id="external linkedIn link" href="https://www.linkedin.com/in/nathan-van-der-velde-36963a156/">
+                    <!-- The linkedIn logo, like the id says. -->
+                    <img id="linkedin-logo" src="assets/img/LinkedIn.png"
+                        alt="Linked In logo"/>
+                    <!-- The text of the linkedIn header, displays my account name. -->
+                    <h1 id="linkedIn-header">Nathan van der Velde</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--
+        Importing in all the JavaScript components that I used in this website
+        to help with functionality.
+    -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/dropdown.js"></script>
+    <script src="assets/js/toggle.js"></script>
+</body>
+<!-- ======================================== -->
+<!-- END OF body SECTION-->
+<!-- ======================================== -->
+
+</html>
+<!-- EOF -->
